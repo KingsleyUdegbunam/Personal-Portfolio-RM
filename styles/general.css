@@ -1,0 +1,61 @@
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+nav {
+  padding-inline: 3rem;
+  height: 10vh;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: inherit;
+}
+
+.navigations {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.navigations p {
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  color: black;
+}
+
+#brand-name {
+  font-size: 1.5rem;
+
+  color: black;
+}
+
+@media screen and (max-width: 48rem) {
+  #brand-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+}
+
+@media screen and (max-width: 36rem) {
+  .nav-wrapper {
+    padding-top: 1rem;
+    gap: 0.7rem;
+    flex-direction: column;
+  }
+
+  #brand-name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .nav-wrapper {
+    gap: 0.5rem;
+  }
+}

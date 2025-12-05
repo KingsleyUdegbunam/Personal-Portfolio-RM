@@ -1,0 +1,348 @@
+:root {
+  --BG-LINK-MOBILE: #e9ecef;
+}
+
+/* LANDING PAGE */
+.landing-pg {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: clamp(2rem, 3vw, 6rem);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 7rem);
+}
+
+.landing-desc {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-style: italic;
+
+  color: grey;
+}
+
+/* MID-SECTION */
+/* Mid-Section Texts */
+h2 {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+}
+
+h4 {
+  font-size: clamp(1.2rem, 1vw, 1.3rem);
+}
+
+.projects-links {
+  display: block;
+  border-bottom: black 1px solid;
+}
+
+.article-text-link {
+  color: rgb(24, 132, 198);
+}
+
+ul li::marker {
+  content: "- ";
+}
+
+ul {
+  margin: 0;
+  padding: inherit;
+
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+}
+
+ul > * {
+  padding-bottom: 0.2rem;
+}
+
+.projects-links:last-child {
+  border: none;
+}
+
+.detail-section-wrapper h2 {
+  margin-bottom: 0.5rem;
+}
+
+.detail-section-wrapper p,
+li {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Mid-Section Containers */
+section.bulk-details {
+  justify-content: center;
+}
+
+.project-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  border-block: grey 1px solid;
+}
+
+.detail-section-wrapper > * {
+  border-right: grey 1px solid;
+  padding-block: 2rem;
+}
+
+.detail-section-wrapper > *:not(:nth-child(2)) {
+  padding-left: 1rem;
+}
+
+.detail-section-wrapper > :first-child {
+  padding-inline: 0;
+}
+
+.detail-section-wrapper > :first-child h2 {
+  padding-left: 2rem;
+}
+
+.detail-section-wrapper > :first-child p {
+  padding-left: 2rem;
+}
+
+.detail-section-wrapper > :last-child {
+  border-right-color: transparent;
+  padding-right: 1rem;
+}
+
+.work-exp-open-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-exp-open-article > *:not(:last-child) {
+  border-bottom: gray 1px solid;
+}
+
+.work-exp-open-article > * {
+  padding-inline: 1rem;
+  flex-basis: 50%;
+}
+
+/* REVIEW SECTION */
+.review {
+  padding-inline: 2rem;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: inherit;
+
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(15ch, 40ch));
+  height: fit-content;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.teacher-review {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: grey solid 1px;
+
+  border-radius: 1.5rem;
+
+  padding: 2rem;
+}
+
+.review-text,
+.review-by {
+  font-size: clamp(0.7rem, 2rem, 1.2rem);
+}
+
+.teacher-name-and-role {
+  display: flex;
+  flex-direction: column;
+
+  color: lightgray;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-block: 2rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .teacher-review {
+    padding: 1.2rem;
+  }
+
+  .review-text,
+  .review-by {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 36rem) {
+  .landing-pg {
+    height: 30vh;
+  }
+
+  .detail-section-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    border-block: 2px black solid;
+  }
+
+  .detail-section-wrapper > * {
+    padding-block: 0;
+    border-block: 1px solid black;
+  }
+
+  .detail-section-wrapper > :first-child p,
+  .detail-section-wrapper :first-child h2 {
+    padding-left: 0;
+  }
+
+  .detail-section-wrapper h2 {
+    border-bottom: black 1.5px solid;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .detail-section-wrapper > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-link-wrapper {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .projects-links {
+    text-align: center;
+  }
+
+  .work-exp-article {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .work-exp-article p,
+  .work-exp-article h4 {
+    padding-inline: 1rem;
+  }
+
+  .detail-section-wrapper > :last-child {
+    padding-inline: 0;
+  }
+
+  .education-article > .education-art {
+    border-bottom: none;
+  }
+  .detail-section-wrapper .education-article {
+    align-items: start;
+  }
+
+  .education-article p,
+  .education-article ul {
+    padding-left: 1.5rem;
+  }
+
+  .detail-section-wrapper h2 {
+    padding: 0.2rem;
+    font-size: 1.3rem;
+  }
+
+  .project-link-wrapper {
+    gap: 0.4rem;
+    background-color: var(--BG-LINK-MOBILE);
+    padding-block: 0.2rem;
+  }
+
+  .roadmap,
+  .open-source-article {
+    background-color: var(--BG-LINK-MOBILE);
+    padding-block: 0.7rem;
+  }
+
+  .roadmap {
+    border-bottom: 1px grey solid;
+  }
+
+  ul {
+    padding-bottom: 0.5rem;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .review-text,
+  .review-by {
+    font-size: 1rem;
+  }
+
+  .teacher-review {
+    padding: 1rem;
+    padding-inline: 1.2rem;
+  }
+
+  .review-container {
+    gap: 1rem;
+    padding-bottom: 0;
+  }
+
+  footer {
+    padding-block: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .landing-desc {
+    font-size: 1rem;
+  }
+
+  .landing-pg {
+    height: 25vh;
+    margin-bottom: 1.2rem;
+  }
+
+  .detail-section-wrapper h2,
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  .review-container {
+    padding-top: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .teacher-review {
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+}
